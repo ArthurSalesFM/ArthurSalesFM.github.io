@@ -1,0 +1,216 @@
+:root{
+    --primary-color: #FF7833;
+    --secondary-color: #31333B;
+    --secondary-color-light: #444856;
+    --secondary-color-dark: #23252d;
+    --default-gap: 3rem;
+}
+
+html{
+    /*62.5% = 10px*/
+    font-size: 62.5%;
+}
+
+body{
+    display: flex;
+    margin: 0;
+    color: #e7e7e7;   
+    background-color: #ccc; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    line-height: 1.7;
+    background-image: url(../imagens/background/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1{
+    font-size: 4rem;
+    color: #a9a7a7;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+h2, h3, h4, h5, h6{
+    color: var(--primary-color);
+    margin: 0;
+}
+
+h2{
+    margin-top: 1rem;
+}
+
+.hightlight{
+    border-left: 1px solid var(--primary-color);
+    font-size: 1.1em;
+    padding: 0 0 0 2em;
+    margin-bottom: 2.2em;
+}
+
+article{
+    padding: 1em 0;
+}
+
+section{
+    margin-bottom: 3rem;
+}
+
+.main-header{
+    flex: 0 0 26rem;
+    background-color: rgba(49, 51, 59, .8);
+}
+
+.main{
+    /*background-color: var(--secondary-color-light);*/
+    background-color: rgba(68, 72, 86, .6);
+    flex: 1 0;
+    padding: 6.5rem 6rem 100vh;
+}
+
+a{
+    color: inherit;
+}
+
+.main, .main-header{
+    font-size: 1.6rem;
+}
+
+.perfil-img{    
+    min-width: 15rem;
+    max-height: 15rem;
+    border-radius: 10%;
+}
+
+.main-nav{
+    text-align: right;
+    /*padding: cima, lateral, baixo*/
+    padding: 6.5rem 2.4rem 2.5rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+/*VERIFICAR DEPOIS
+.main-nav-img{
+    margin-top: 0;
+    padding: 0;
+    width: 25px;
+    justify-content: baseline;
+}*/
+
+.main-nav ul{
+    padding: 0;
+    /*Retirando os bulets*/
+    list-style: none;
+}
+
+.main-nav ul a{
+    display: block;
+    padding: 1.2rem 0;
+    text-decoration: none;
+    transition: paddin-right .2s, background-color .4s;
+    background-color: transparent;
+}
+
+.main-nav ul a:hover, .main-nav ul a:focus{
+    background-color: var(--secondary-color-light);
+    padding-right: 1rem;
+}
+
+.main-nav li{
+    border-bottom: 1px solid #7b7b7b;
+    padding: .4rem 0;
+}
+
+.card{
+    max-width: 740px;
+    background-color: var(--secondary-color);
+    padding: 0;
+}
+
+.card_content{
+    padding: .5em 1em 1em;
+}
+
+.card_content p, .card_title{
+    margin: 0;
+}
+
+.card_title{
+    font-size: 1.75em;
+    margin-bottom: .25em;
+}
+
+.card img{
+    max-width: 100%;
+}
+
+.row{
+    display: flex;
+    gap: var(--default-gap);
+    padding: 1.5rem 0;
+    justify-content: space-between;
+}
+
+.row .row{
+    padding-top: 0;
+}
+
+.row > *{
+    /*flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0%;*/
+    flex: 1 0 0%;
+}
+
+label{
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table td:last-child, .table th:last-child{
+    text-align: right;
+}
+
+.table td, .table th{
+    padding: 1.6rem;
+}
+
+.table:not(.table-alternate) tr:not(:last-child), 
+.table:not(.table-alternate) th{
+    border-bottom: 2px solid var(--secondary-color-dark);
+}
+
+.table th{
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.table-alternate tbody tr:nth-child(odd){
+    background-color: var(--secondary-color);
+}
+
+.table-verticalLines td:not(:last-child), .table-verticalLines th:not(:last-child){
+    border-right: 1px solid var(--secondary-color-dark);
+}
+
+.link-icon{
+    width: 3rem;
+    height: 3rem;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 0.5rem;
+    margin-left: 3rem;
+    text-decoration: none;
+}
+
+.address-decoration{
+    text-decoration: none;
+}
